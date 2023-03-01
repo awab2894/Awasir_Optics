@@ -14,7 +14,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content:space-between;
-    width: 5%;
+    width: 95%;
     max-height: 70px;
     top: 10px;
     left: 50%;
