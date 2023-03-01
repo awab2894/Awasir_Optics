@@ -19,7 +19,7 @@ header {
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(to right, #f5f5f5 75%, #e9efff );
+    background: #000;
     z-index: 10;
     border-radius: 50px;
 }
