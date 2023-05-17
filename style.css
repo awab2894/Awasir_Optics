@@ -262,8 +262,8 @@ header .nav-icon {
         left: 50%;
         top: 60px;
         width: 85%;
-        height: 0px;
-        transform: translateX(-50%);
+        height: 10px;
+        transform: translate(-50%);
         gap: 0;
         flex-direction: column;
         background: #3939399f;
