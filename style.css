@@ -260,7 +260,7 @@ header .nav-icon {
     header .nav-menu {
         position: fixed;
         left: 50%;
-        top: 68px;
+        top: 69px;
         width: 85%;
         height: 0px;
         transform: translate(-50%);
