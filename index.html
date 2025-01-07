@@ -290,20 +290,6 @@
         <p style="font-size: 14px">Designer & Developer Albraa M. -<a href="mailto: algazaly62300@gmail.com">Email</a></p>
     </footer>
 
-    <script>
-        const navIcon = document.querySelector('.nav-icon');
-        const navMenu = document.querySelector('.nav-menu');
-        const navItems = navMenu.children;
-        
-        navIcon.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-        
-        for(item of navItems){
-            item.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-        });
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html> 
