@@ -1,314 +1,217 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial;
-    font-size: 23px;
-    scroll-behavior: smooth;
-    direction: rtl;
-    transition: 0.3s;
-}
-/*header*/
-header {
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-    width: 95%;
-    max-height: 70px;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: linear-gradient(to right, #f5f5f5 75%, #e9efff );
-    z-index: 10;
-    border-radius: 50px;
-}
-    header .logo {
-        position: relative;
-        right: 15px;
-        text-align: center;
-        transform: translate(-20px);
-    }
-        header .logo .logo-text {
-            font-family: Arial;
-            cursor: pointer;
-            color: #00d;
-            font-size: 45px;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth;
         }
-    header .nav-menu {
-        transform: translate(20px, 20%);
-        display: flex;
-        flex-direction: row;
-        overflow: hidden;
-    }
-    header .nav-menu .nav-item{
-        list-style: none;
-        width: 150px;
-        height: 45px;
-    }
-        header .nav-menu .nav-item .nav-link {
-            display: flex;
+
+        body {
+        width: 100%;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f9;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
             width: 100%;
-            height: 100%;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
+            padding: 10px 0;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #3498db;
+            cursor: pointer;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-menu li {
+            margin: 0 15px;        
+        }
+
+        .nav-menu Li a {
             text-decoration: none;
-            color: #000;
-            transition: 0.2s;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
         }
-        header .nav-menu .nav-item .nav-link:hover {
-            color: #00d;
+
+        .nav-menu a:hover {
+            background: #3498db;
+            color: #fff;
         }
-/*design all of the sections*/
-section {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(to right,#e1e2e3, #eaecee, #fdfeff, #fff, #fdfeff, #eaecee, #e1e2e3);
-    padding: 75px 5px 10px;
-    background-size: cover;
-}
-h2 {
-    color: #24c;
-    font-size: 50px;
-    text-align: center;
-    margin: 15px 5px;
-    cursor: default;
-}
-p {
-    font-size: 28px;
-    line-height: 37px;
-    margin: 20px 7px;
-    word-spacing: 4px;
-    text-align: center;
-    text-shadow: 0.5px 0.75px 0 #fff, -0.5px -0.25px #fff;
-    margin: 5px 10px;
-    cursor: ibeam;
-}
-img{
-    cursor: pointer;
-}
-/*the main banner ---------*/
-.home {
-    background: transparent url(images/bg_1.jpg) no-repeat fixed center;
-    background-size: cover;
-    padding: 230px 10px;
-    text-align: center;
-    box-shadow: 0 -2px 7px inset #0007;
-}
-.mainheading {
-    color: #25f;
-    font-size: 85px;
-    margin: 0 0 10px 0;
-    text-shadow: 1px 1.5px 0 #017, -1px -0.5px 0 #13b;
-}
-.mainparagraph {
-    font-size: 42px;
-    line height: 50px;
-    margin: 2px;
-    text-align: center;
-    cursor: pointer;
-}
-/*About us banner*/
-.about {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 90px 50px 10px;
-}
-    .about > div {
+
+        .nav-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        .nav-icon .bar {
+            width: 25px;
+            height: 3px;
+            background: #333;
+            margin: 5px 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        section {
+        width: 100%;
         display: flex;
-        flex-direction: row-reverse;
-        margin: 0px 15px;
-        padding: 5px 20px;
-    }
-    .about div img {
-        width: 350px;
-        height: 350px;
-    }
-    .about p {
-        text-align: center;
-    }
-/*glasses and team banners*/
-.glasses {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-    .glasses .content {
-        margin: 10px 10px 0;
-    }
-    .glasses .card {
-        position: relative;
-        width: 250px;
-        height: 300px;
-        float: right;
-        margin: 10px 30px;
-        text-align: center;
-        background: linear-gradient(#24ca, #24cb, #24cc, #24cd, #24ce);
-        border-radius: 15px;
-        box-shadow: 1px 1px 10px #0007
-    }
-        .glasses .card .imgbox {
-            position: relative;
-            width: 92%;
-            height: 77%;
-            top: 10px;
-            left: -50%;
-            margin: 0 0 20px;
-            transform: translateX(50%);
+        flex-direction: column;
+        align-items: center;
+            padding: 100px 0;
+            min-height: 100vh;
+        }
+
+        .home {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/home_bg.png') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 150px 10px;
+        }
+
+        .home h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .home p {
+            font-size: 24px;
+            line-height: 1.5;
+        }
+
+        .about, .glasses {
+            text-align: center;
+            background: #fff;
+            margin: 20px auto;
+            padding: 80px 10px 30px;
             border-radius: 10px;
-            overflow: hidden;
-            background: #fff5;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-            .glasses .card .imgbox img {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                left: -50%;
-                transform: translateX(50%);
-                border: 0;
-            }
-        .glasses .card h3 {
-            font-size: 20px;
+
+        .about img, .glasses img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .glasses .content {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .glasses .card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .glasses .card:hover {
+            transform: scale(1.05);
+        }
+
+         .contact {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/contact_bg.png') no-repeat center center/cover;
             color: #fff;
-            margin: 23px;
+            text-align: center;
+            padding: 150px 20px;
         }
-/*contact banner*/
-.contact {
-    padding: 95px 5px 10px;
-    display: flex;
-    justify-content: center;
-    background: transparent url(images/bg_1.jpg) no-repeat fixed center;
-    background-size: cover;
-    box-shadow: 0 2px 7px inset #0007;
-}
-form {
-    position: relative;
-    width: 400px;
-    min-height: 505px;
-    max-height: 565px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #e7e9efcc;
-    filter: blur(0.5px);
-    border-radius: 20px;
-    border-bottom: 0.1px solid #0004;
-    box-shadow: 5px 10px 10px #0003, -5px -10px 7px #0001, -3px -3px 10px inset #0001, 5px 7px 10px inset #0001;
-}
-input, textarea, button {
-    position: relative;
-    width: 270px;
-    height: 35px;
-    margin: 12px 30px;
-    padding: 10px 20px;
-    border: 0;
-    border-radius: 20px;
-    resize: none;
-    filter: blur(0);
-}
-textarea {
-    min-height: 150px;
-}
-input[type=submit], button {
-    width: 120px;
-    height: 40px;
-    box-shadow: 0 0 10px #0003;
-    background: #24c;
-    color: #fff;
-    padding: 2px 0;
-    transition: 0.3s;
-}
-    input[type=submit]:hover, button:hover {
-        width: 140px;
-        letter-spacing: 2px;
-    }
-
-
-header .nav-icon {
-    display: none;
-    cursor: pointer;
-    transform: translate(50px, 23px);
-}
-    header .nav-icon .bar {
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        -webkit-transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-        background: #00d;
-    }
-@media(max-width: 790px){
-    header .nav-icon{
-        display: block;
-    }
-    .nav-icon.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .nav-icon.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .nav-icon.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-    header .nav-menu {
-        position: fixed;
-        left: 50%;
-        top: 69px;
-        width: 85%;
-        height: 0px;
-        transform: translate(-50%);
-        gap: 0;
-        flex-direction: column;
-        background: #3939399f;
-        text-align: center;
-        transition: 0.3s;
-        border-bottom: 1px solid #f5f5f5;
-        box-shadow: 0px 5px 5px inset #0005;
         
-    }
-        header .nav-menu .nav-item .nav-link{
-            width: 79vw;
+        .contact form{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap:10px;
+            column-gap: 3px;
+            align-items: right;
+            width: 80%;
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 500px;
+            background:#191f2555;
+            backdrop-filter: blur(10px);
+        }
+        
+        .contact form input, textarea{
+            padding: 2px 5px;
+            border-radius: 5px;
+            resize: vertical;
+        }
+        .contact form input[type="submit"]{
+            gird-column: 1 / 2;
+            border: none;
+            background: #f4f4f9;
+            color: #3498db;
+        }
+        
+        footer {
+            background: #333;
             color: #fff;
+            text-align: center;
+            padding: 25px 10px 0px;
         }
-        header .nav-menu .nav-item .nav-link:hover {
-            background: linear-gradient(to right, #f5f5f5 75%, #e9efff );
-        }
-        header .nav-menu.active {
-            height: 225px;
-            opacity: 100%;
-        }
-.mainheading {
-    font-size: 50px;
-}
-.mainparagraph{
-    font-size: 30px;
-}
-}
 
-@media(max-width: 977px){
-     header .nav-menu .nav-item{
-         width: 115px;
-     }
-    .about {
-        padding: 90px 0px 10px;
-    }
-    .about > div{
-        align-items: center;
-        flex-direction: column;
-    }
-    .glasses .content{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-.contact {
-    padding: 140px 10px 5px;
-}
-}
+        footer a {
+            color: #3498db;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        footer a:hover {
+            color: #def;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu li{
+                width: 100%;
+                margin: 0;
+                text-align: center;
+            }
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                background: #fff;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                position: absolute;
+                top: 70px;
+                left: 0;   
+                width: fit-content;
+                max-width: 100%;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-icon {
+                display: block;
+            }
+        }
