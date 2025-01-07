@@ -85,7 +85,7 @@
         }
 
         .home {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/home_bg.png') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/main/home_bg.png') no-repeat center center/cover;
             color: #fff;
             text-align: center;
             padding: 150px 10px;
@@ -137,7 +137,7 @@
         }
 
          .contact {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/contact_bg.png') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/main/contact_bg.png') no-repeat center center/cover;
             color: #fff;
             text-align: center;
             padding: 150px 20px;
