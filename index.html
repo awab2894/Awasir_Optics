@@ -1,108 +1,309 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
-    <title>مركز أواصر للبصريات</title>
-    <meta name="charset" content="UTF-8" />
-    <meta name="author" content="Awab Mohammed" />
-    <meta name="keywords" content="awasir, Awasir, optices, Optices, glasses, أواصر, بصريات, نظارات," />
-    <meta name="description" content="view more ..." />
-    <meta name="viewport" content="width+device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="icon" href="favicon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Awab Mohammed">
+    <meta name="keywords" content="awasir, optics, glasses, أواصر, بصريات, نظارات">
+    <meta name="description" content="مركز أواصر للبصريات يقدم أفضل النظارات والخدمات البصرية.">
+    <title>مركز أواصر للبصريات</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+        width: 100%;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f9;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #3498db;
+            cursor: pointer;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-menu li {
+            margin: 0 15px;        
+        }
+
+        .nav-menu Li a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            background: #3498db;
+            color: #fff;
+        }
+
+        .nav-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        .nav-icon .bar {
+            width: 25px;
+            height: 3px;
+            background: #333;
+            margin: 5px 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+            padding: 100px 0;
+            min-height: 100vh;
+        }
+
+        .home {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/home_bg.png') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 150px 10px;
+        }
+
+        .home h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .home p {
+            font-size: 24px;
+            line-height: 1.5;
+        }
+
+        .about, .glasses {
+            text-align: center;
+            background: #fff;
+            margin: 20px auto;
+            padding: 80px 10px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .about img, .glasses img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .glasses .content {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .glasses .card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .glasses .card:hover {
+            transform: scale(1.05);
+        }
+
+         .contact {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/contact_bg.png') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 150px 20px;
+        }
+        
+        .contact form{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap:10px;
+            column-gap: 3px;
+            align-items: right;
+            width: 80%;
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 500px;
+            background:#191f2555;
+            backdrop-filter: blur(10px);
+        }
+        
+        .contact form input, textarea{
+            padding: 2px 5px;
+            border-radius: 5px;
+            resize: vertical;
+        }
+        .contact form input[type="submit"]{
+            gird-column: 1 / 2;
+            border: none;
+            background: #f4f4f9;
+            color: #3498db;
+        }
+        
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 25px 10px 0px;
+        }
+
+        footer a {
+            color: #3498db;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        footer a:hover {
+            color: #def;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu li{
+                width: 100%;
+
 </head>
-<body aauto>
+<body>
     <header>
-        <div class="logo">
-            <h1 class="logo-text" title="شعار مركز أواصر للبصريات">أواصر</h1>
-        </div>
-        <ul class="nav-menu">
-            <li class="nav-item" title="العودة للصفحة الرئيسية"><a href="index.html#home" class="nav-link">الرئيسية</a></li>
-            <li class="nav-item" title="نبذة عنا"><a href="#about" class="nav-link">نبذة</a></li>
-            <li class="nav-item" title="معرض النظارات"><a href="gallery.html" class="nav-link">المعرض</a></li>
-            <li class="nav-item" title="الفريق العمل الخاص بنا"><a href="#team" class="nav-link">فريقنا</a></li>
-            <li class="nav-item" title="مواضيع قصيرة متعلقة بالنظر والبصريات"><a href="subjects.html" class="nav-link">مواضيع</a></li>
-        </ul>
-        <div class="nav-icon">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+        <div class="container">
+            <div class="logo">أواصر</div>
+            <ul class="nav-menu">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#glasses">النظارات</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+            <div class="nav-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </div>
     </header>
-    <footer>
-        <a href="https://www.facebook.com/profile.php?id=100063440786811" target="_blank" class="fa fa-facebook"></a>
-        <p> &#128222; 0155408480</p>
-        <a style="font-size: 20px;" href="mailto:awasiroptics9@gmail.com" target="_blank" class="fa fa-google"></a>
-    </footer>
 
     <section id="home" class="home">
-        <h1 hidden>Awasir optices</h1>
-        <h2 class="mainheading">دائماً اختر الأفضل</h2>
-        <p class="mainparagraph">نحن نوفر لك عنايةً خاصةً لترى العالم بشكلٍ أفضل</p>
+        <h1>مرحباً بكم في أواصر</h1>
+        <p>نحن نجعلك ترى العالم بشكل أفضل</p>
     </section>
 
     <section id="about" class="about">
-        <h2>نبذة عنَّا</h2>
-        <div>
-            <img src="images/img_1.jpg" alt="بصريات أواصر" title="مركز أواصر للبصريات" />
-            <p>مركز أواصر للبصريات ، للمركز فرعان الأول تأسس عام 2017 في مدينة الدبة بالولاية الشمالية مما سهل على المواطنين الحصول على الخدمات البصرية ؛ حيث كان أقرب مركز للبصريات في مدينة دنقلا.<br />أما الفرع الثاني فتأسس عام 2018 في أبو آدم بمدينة الخرطوم.<br />تقدم البصريات خدمات بصرية تشمل: كشف وتقويم النظر ، فريمات وعدسات لنظارات القراءة والنظارات الطبية والشمسية ، استشارات ونصائح طبية بصرية.</p>
-        </div>
+        <h2>من نحن ؟</h2>
+        <img src="images/about_bg.png" alt="من نحن">
+        <p>أواصر للبصريات تقدم حلولاً مميزة لتلبية احتياجاتكم البصرية.</p>
+        <br/>
+        <h3 id="services" class="services">خدماتنا</h3>
+        <ul style="text-align: right;">
+            <li>كشف نظر بالكمبيوتر</li>
+            <li>عدسات طبية</li>
+            <li>عدسات لاصقة</li>
+            <li>فريمات</li>
+            <li>نظارات شمسية</li>
+            <li>تقويم نظارات</li>
+        </ul>
     </section>
-
+    
     <section id="glasses" class="glasses">
         <h2>النظارات</h2>
-        <p>نمتلك أجود أنواع النظارات</p>
         <div class="content">
             <div class="card">
-                <div class="imgbox">
-                    <img src="images/glss_6.jpg" alt="نظارة - مركز أواصر للبصريات" title="نظارة" />
-                </div>
-                <h3>boss</h3>
+                <img src="glasses/glasses1.jpg" alt="نظارة 1">
+                <h3>نظارة 1</h3>
             </div>
             <div class="card">
-                <div class="imgbox">
-                    <img src="images/glss_7.jpg" alt="نظارة - مركز أواصر للبصريات" title="نظارة" />
-                </div>
-                <h3>puma</h3>
+                <img src="glasses/glasses2.jpg" alt="نظارة 2">
+                <h3>نظارة 2</h3>
             </div>
             <div class="card">
-                <div class="imgbox">
-                    <img src="images/glss_8.jpg" alt="نظارة - مركز أواصر للبصريات" title="نظارة" />
-                </div>
-                <h3>lacoste</h3>
-            </div>
-        </div>
-        <div class="button">
-            <a class="button" href="gallery.html" title="عرض المزيد من النظارات">المعرض</a>
-        </div>
-    </section>
-
-    <section id="team" class="glasses">
-        <h2>فريق العمل</h2>
-        <p>مع نخبة من الموظفين في فريق عمل متكامل</p>
-        <div class="content">
-            <div class="card">
-                <div class="imgbox">
-                    <img src="images/person_1.png" alt="فريق عمل مركز أواصر للبصريات" title="ملهم عبدالرحيم - مدير" />
-                </div>
-                <h3>أحمد عبدالرحمن - مدير</h3>
-            </div>
-            <div class="card">
-                <div class="imgbox">
-                    <img src="images/person_2.png" alt="فريق عمل مركز أواصر للبصريات" title="محمد أحمد - طبيب" />
-                </div>
-                <h3>محمد سراج - طبيب</h3>
-            </div>
-            <div class="card">
-                <div class="imgbox">
-                    <img src="images/person_3.png" alt="فريق عمل مركز أواصر للبصريات" title="أحمد علي - طبيب" />
-                </div>
-                <h3>مدثر الطاهر - طبيب</h3>
+                <img src="glasses/glasses3.jpg" alt="نظارة 3">
+                <h3>نظارة 3</h3>
             </div>
         </div>
     </section>
 
-    <script src="script.js"></script>
+
+    <section id="contact" class="contact">
+        
+            <h2>تواصل معنا</h2> 
+        <form>          
+            <label for="fullname">الاسم</label>
+            <input type="text" name="fullname" placeholder="ادخل اسمك" required/>
+            <label for="emailAccount">البريد</label>
+            <input type="email" name="emailAccount" placeholder="ادخل البريد الالكتروني"/>
+            <label for="phone">الجوال</label>
+            <input type="tel" name="phone" placeholder="+249123456789" required/>
+            <label for="title">العنوان</label>
+            <input type="text" name="title" placeholder="اكتب عنوان الرسالة"/>
+            <label for="subject">الموضوع</label>
+            <textarea name="subject" placeholder="اكتب الرسالة هنا" rows="5"></textarea>
+            <input type="submit" value="إرسال"/>
+        </form>
+    </section>
+
+
+    <footer>
+        <p>حقوق الطبع © 2025 أواصر للبصريات. جميع الحقوق محفوظة.</p>
+        <a href="https://www.facebook.com/profile.php?id=100063440786811&mibextid=ZbWKwL ">فيسبوك</a> | <a href="mailto:awasiroptics9@gmail.com">البريد الاكتروني</a>
+        <br/><br>
+        <p style="font-size: 14px">Designer & Developer Albraa M. -<a href="mailto: algazaly62300@gmail.com">Email</a></p>
+    </footer>
+
+    <script>
+        const navIcon = document.querySelector('.nav-icon');
+        const navMenu = document.querySelector('.nav-menu');
+        const navItems = navMenu.children;
+        
+        navIcon.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        for(item of navItems){
+            item.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+        });
+        }
+    </script>
 </body>
-</html>
+</html> 
